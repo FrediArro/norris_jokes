@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="menu.js"></script>
+<script src="category2.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="category2.css">
+    <link rel="stylesheet" type="text/css" href="cassettePlayer.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+<body>
+<div class="header" style="background-color: #E8D1B1">
+    <div class="homeButton">
+        <a href="index.html">
+            <img src="icons/homeIcon.png" width="35px" height="35px">
+        </a>
+    </div>
+    <div class="menuButton" onclick="menuToggle(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+</div>
+<div class="menu menu-fadeOut" id="menuContainer">
+    <div class="categories">
+        <div class="category"></div>
+        <div class="category"></div>
+        <div class="category"></div>
+    </div>
+</div>
+<div class="table">
+    <div id="cassettePlayer" class="">
+        <div id="speaker" class="">
+            <div id="" class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+            <div class="speakerRib"></div>
+        </div>
+        <div id="cassetteComp" class="">
+            <div id="cassetteCompWindow" class=""></div>
+        </div>
+        <div id="screenSection"></div>
+        <div id="buttonSection">
+            <div class="button" id="back">
+                <img src="resources/step-backward.svg">
+            </div>
+            <div class="button" id="pause" onclick="pause()">
+                <img src="resources/pause-symbol.svg">
+            </div>
+            <div class="button" id="play" onclick="speak()">
+                <img src="resources/play-button.svg">
+            </div>
+            <div class="button" id="forward">
+                <img src="resources/step-forward.svg">
+            </div>
+            <div class="button" id="mute">
+                <img src="resources/volume-off.svg">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

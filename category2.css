@@ -1,0 +1,19 @@
+body {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.table {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 55px);
+    background-color: #E8D1B1;
+    z-index: auto;
+}
+
+.casssette {
+
+}

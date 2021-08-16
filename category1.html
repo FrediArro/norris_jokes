@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="menu.js"></script>
+<script src="category1.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="category1.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
-<body bgcolor="chucknorris">
-<!-- Menu button (HTML, CSS and JS) referenced from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js -->
-<div class="header" bgcolor="chucknorris">
+<body>
+<div class="header" style="background-color: #E8D1B1">
     <div class="homeButton">
         <a href="index.html">
             <img src="icons/homeIcon.png" width="35px" height="35px">
@@ -28,8 +28,12 @@
         <div class="category"></div>
     </div>
 </div>
-<div class="titlescreen" id="title">
-    <h1>Jokes to Chuck your Norris!</h1>
+<div class="table">
+    <div class="card" id="card_1" onmousedown="setId(this)"></div>
+    <div class="card" id="card_2" onmousedown="setId(this)"></div>
+    <div class="card" id="card_3" onmousedown="setId(this)"></div>
+    <div class="card" id="card_4" onmousedown="setId(this)"></div>
+    <div class="card" id="card_5" onmousedown="setId(this)"></div>
 </div>
 </body>
 </html>

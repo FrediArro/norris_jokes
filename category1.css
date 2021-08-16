@@ -1,0 +1,27 @@
+body {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.table {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 55px);
+    background-color: #E8D1B1;
+    z-index: auto;
+}
+
+.card {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 225px);
+    width: 450px;
+    height: 150px;
+    cursor: move;
+    background: white;
+    border: solid 1px #695130;
+    box-shadow: 2px 2px 1px black ;
+}

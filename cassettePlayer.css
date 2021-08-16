@@ -1,0 +1,89 @@
+#cassettePlayer {
+    position: absolute;
+    display: block;
+    background-color: #bfbfbf;
+    top: calc(50% - 350px);
+    left: calc(50% - 175px);
+    transform: rotate(30deg);
+    height: 700px;
+    width: 350px;
+    padding: 5px;
+    border: 1px solid #4a4a4a;
+}
+
+#speaker {
+    border: 2px solid #474747;
+    position: relative;
+    width: calc(100% - 4px);
+    height: calc(40% - 4px);
+    background-color: #292929;
+    display: block;
+}
+
+.speakerRib {
+    height: 10px;
+    margin-bottom: 10px;
+    background-color: #474747;
+}
+
+#cassetteComp {
+    position: relative;
+    width: calc(100% - 60px);
+    height: calc(30% - 80px);
+    background-color: #e6e6e6;
+    border: 30px ridge #525252;
+    border-top: 40px ridge #525252;
+    border-bottom: 40px ridge #525252;
+}
+
+#cassetteCompWindow {
+    width: 100%;
+    height: 100%;
+    background-color: #ebffde;
+}
+
+#screenSection {
+    position: relative;
+    width: calc(100% - 30px);
+    height: calc(10% - 30px);
+    background-color: #5F8049;
+    border: 15px solid #30382b;
+}
+
+#buttonSection {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: calc(100% - 40px);
+    height: calc(20% - 40px);
+    background-color: #292929;
+    padding: 20px;
+}
+
+.button {
+    height: 100%;
+    width: 20%;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.button>img {
+    height: 45px;
+    width: 45px;
+    margin: 0 auto;
+}
+
+#mute {
+    height: 30%;
+    width: 10%;
+    background: gray;
+    display: flex;
+    align-items: center;
+}
+
+#mute>img {
+    height: 20px;
+    width: 20px;
+    margin: 0 auto;
+}
