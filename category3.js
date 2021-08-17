@@ -30,7 +30,7 @@ function jokesManager(data) {
 function updateJoke() {
     if (seenJokes.length <= 5) {
         loadJSON(
-            "https://api.chucknorris.io/jokes/random?category=music",
+            "https://api.chucknorris.io/jokes/random?category=dev",
             function(data) { jokesManager(data); },
             function(xhr) { console.error(xhr); });
     }
