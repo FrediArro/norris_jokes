@@ -1,0 +1,122 @@
+/* Cassette is referenced from: https://codepen.io/abehjat/pen/gnyEk */
+
+.cassette {
+    position: relative;
+    margin: 0 auto;
+    width: 240px;
+    height: 120px;
+    padding: 15px;
+    background-color: #333;
+    display: inline-block;
+    border-radius: 7px;
+    top: 31px;
+    grid-area: 1/1;
+}
+
+.inner_1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 75%;
+    width: 100%;
+    background-color: #fffce6;
+    border-radius: 5px;
+}
+
+.inner_2 {
+    position: relative;
+    display: inline-block;
+    height: 40%;
+    width: 65%;
+    top: 30%;
+    background-color: #ABABAB;
+    border-radius: 100px;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+}
+
+.left_w {
+    position: relative;
+    right: 0px;
+    top: 1px;
+}
+
+.right_w {
+    position: relative;
+    right: -88px;
+    top: 2px;
+}
+
+i {
+    font-size: 2.2em;
+}
+
+.fa-cog:before {
+    display: block;
+    width: 31px;
+    height: 33px;
+    background-color: #ABABAB;
+    border-radius: 30px;
+}
+
+#trapezoid {
+    border-bottom: 30px solid #4b4b4b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 180px;
+    position: relative;
+    bottom: -15px;
+    left: 20px;
+}
+
+#trapezoid > div:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    position: relative;
+    top: 16px;
+    left: 10px;
+}
+
+#trapezoid > div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    position: relative;
+    top: 5px;
+    left: 160px;
+}
+
+#trapezoid > div:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    position: relative;
+    top: -12px;
+    left: 140px;
+}
+
+#trapezoid > div:nth-child(4) {
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    position: relative;
+    top: -20px;
+    left: 30px;
+}
+
+audio {
+    visibility: hidden;
+}

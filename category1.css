@@ -1,3 +1,5 @@
+@font-face { font-family: PokerKings; src: url("fonts/PokerKings-Regular.ttf"); }
+
 body {
     position: absolute;
     margin: 0;
@@ -6,22 +8,118 @@ body {
     overflow: hidden;
 }
 
-.table {
+#table {
     position: relative;
     width: 100%;
     height: calc(100% - 55px);
-    background-color: #E8D1B1;
+    background-color: #007020;
     z-index: auto;
+    overflow: hidden;
+}
+
+#table>p {
+    margin-top: 82vh;
+    margin-left: 2vw;
+    width: 100%;
+    font-size: 5.5vmin;
+    font-family: PokerKings;
+    color: #20BD4C;
 }
 
 .card {
     position: absolute;
-    top: calc(50% - 75px);
-    left: calc(50% - 225px);
-    width: 450px;
-    height: 150px;
-    cursor: move;
+   background: white;
+    top: 50px;
+    left: 25px;
+    width: 250px;
+    height: 350px;
+    border: solid 1px #919191;
+    border-radius: 10px;
+    transform: rotate(30deg);
+}
+
+.flipCard {
+    position: absolute;
+    background: transparent;
+    top: 50px;
+    left: 25px;
+    width: 250px;
+    height: 350px;
+    transform: rotate(30deg);
+}
+
+.innerCard {
+    position: relative;
     background: white;
-    border: solid 1px #695130;
-    box-shadow: 2px 2px 1px black ;
+    border: solid 1px #919191;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.cardFlipped .innerCard {
+    transform: rotateY(180deg);
+}
+
+.cardFront {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cardDrawing {
+    position: absolute;
+    overflow: hidden;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border: solid 10px white;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.cardDrawing::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: linear-gradient(to bottom, transparent 60%, #700A0A 60%),
+    linear-gradient(to right, #BD2020 60%, #700A0A 60%);
+    background-size: 10px 20px, 20px 10px;
+    transform: rotate(45deg);
+}
+
+.cardBack {
+    font-size: 17px;
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.cardToCenter {
+    animation: moveToCenter 2s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToCenter {
+    from {}
+    to {left: calc(50% - 175px); top: calc(50%); transform: rotate(190deg)}
+}
+
+.cardToBin {
+    animation: moveToBin 2s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToBin {
+    from {left: calc(50% - 175px); top: calc(50%); transform: rotate(190deg)}
+    to {left: calc(100% + 100px); transform: rotate(360deg)}
 }

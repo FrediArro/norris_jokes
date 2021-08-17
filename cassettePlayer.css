@@ -1,10 +1,12 @@
+@font-face { font-family: Subway-Tickers; src: url("fonts/SUBWT___.ttf"); }
+
 #cassettePlayer {
     position: absolute;
     display: block;
     background-color: #bfbfbf;
-    top: calc(50% - 350px);
-    left: calc(50% - 175px);
-    transform: rotate(30deg);
+    top: calc(50% - 400px);
+    left: calc(50% - 100px);
+    transform: rotate(25deg);
     height: 700px;
     width: 350px;
     padding: 5px;
@@ -26,28 +28,71 @@
     background-color: #474747;
 }
 
+#cassetteReader {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: grid;
+}
+
 #cassetteComp {
+    grid-area: 1/1;
     position: relative;
     width: calc(100% - 60px);
-    height: calc(30% - 80px);
-    background-color: #e6e6e6;
+    height: calc(100% - 80px);
     border: 30px ridge #525252;
     border-top: 40px ridge #525252;
     border-bottom: 40px ridge #525252;
+    background-color: transparent;
 }
 
 #cassetteCompWindow {
     width: 100%;
     height: 100%;
     background-color: #ebffde;
+    opacity: 60%;
 }
+
 
 #screenSection {
     position: relative;
     width: calc(100% - 30px);
     height: calc(10% - 30px);
+    line-height: calc(10% - 30px);
     background-color: #5F8049;
     border: 15px solid #30382b;
+    overflow:hidden;
+}
+
+/* Sliding text animation referenced from:
+https://stackoverflow.com/questions/32638465/how-to-scroll-text-smoothly-using-html5 */
+
+@keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
+}
+@-webkit-keyframes slide {
+    from { left:100%; transform: translate(0, 0); }
+    to { left: -100%; transform: translate(-100%, 0); }
+}
+
+#runningJoke {
+    font-family: Subway-Tickers;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: max-content;
+    height: 100%;
+    font-size: 20px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count: infinite;
 }
 
 #buttonSection {
@@ -62,7 +107,7 @@
 
 .button {
     height: 100%;
-    width: 20%;
+    width: 23%;
     background: white;
     display: flex;
     align-items: center;
@@ -74,16 +119,22 @@
     margin: 0 auto;
 }
 
-#mute {
-    height: 30%;
-    width: 10%;
-    background: gray;
-    display: flex;
-    align-items: center;
+.playBlinking {
+    animation: play_blinker 1s linear infinite;
 }
 
-#mute>img {
-    height: 20px;
-    width: 20px;
-    margin: 0 auto;
+@keyframes play_blinker {
+    50% {
+        background: #94c390;
+    }
+}
+
+.pauseBlinking {
+    animation: pause_blinker 1s linear infinite;
+}
+
+@keyframes pause_blinker {
+    50% {
+        background: #ecaa4c;
+    }
 }

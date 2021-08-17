@@ -1,3 +1,5 @@
+@font-face { font-family: Subway-Tickers; src: url("fonts/SUBWT___.ttf"); }
+
 body {
     position: absolute;
     margin: 0;
@@ -10,10 +12,15 @@ body {
     position: relative;
     width: 100%;
     height: calc(100% - 55px);
-    background-color: #E8D1B1;
+    background-color: #ffd69d;
     z-index: auto;
 }
 
-.casssette {
-
+#title {
+    font-family: Subway-Tickers;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    font-size: 5vh;
+    color: black;
 }

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="category1.css">
+    <link rel="stylesheet" type="text/css" href="category3.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
-<body>
-<div class="header" style="background-color: #007020">
+<body bgcolor="chucknorris">
+<!-- Menu button (HTML, CSS and JS) referenced from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js -->
+<div class="header" bgcolor="chucknorris">
     <div class="homeButton">
         <a href="index.html">
             <img src="icons/homeIcon.png" width="35px" height="35px">
@@ -32,19 +33,10 @@
         </a>
     </div>
 </div>
-<div id="table" onclick="cardMove()">
-    <p>Click anywhere to see what happens...</p>
-    <div id="stack">
-        <div class="card" style="top:70px; left: 45px"></div>
-        <div class="card" style="top:66px; left: 41px"></div>
-        <div class="card" style="top:62px; left: 37px"></div>
-        <div class="card" style="top:58px; left: 33px"></div>
-        <div class="card" style="top:54px; left: 29px"></div>
-        <div class="card"><div class="cardDrawing"></div></div>
-    </div>
-
+<div class="titlescreen" onclick="updateJoke()">
+    <h1 id="title">Hello</h1>
 </div>
 </body>
 <script src="menu.js"></script>
-<script src="category1.js"></script>
+<script src="category3.js"></script>
 </html>

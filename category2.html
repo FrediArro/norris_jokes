@@ -7,10 +7,13 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="category2.css">
     <link rel="stylesheet" type="text/css" href="cassettePlayer.css">
+    <link rel="stylesheet" type="text/css" href="cassette.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 </head>
 <body>
-<div class="header" style="background-color: #E8D1B1">
+<div class="header" style="background-color: #ffd69d">
     <div class="homeButton">
         <a href="index.html">
             <img src="icons/homeIcon.png" width="35px" height="35px">
@@ -24,12 +27,19 @@
 </div>
 <div class="menu menu-fadeOut" id="menuContainer">
     <div class="categories">
-        <div class="category"></div>
-        <div class="category"></div>
-        <div class="category"></div>
+        <a href="category3.html">
+            <div class="category">Dev</div>
+        </a>
+        <a href="category1.html">
+            <div class="category">Money</div>
+        </a>
+        <a href="category2.html">
+            <div class="category">Music</div>
+        </a>
     </div>
 </div>
 <div class="table">
+    <p id="title">Play with me</p>
     <div id="cassettePlayer" class="">
         <div id="speaker" class="">
             <div id="" class="speakerRib"></div>
@@ -47,27 +57,48 @@
             <div class="speakerRib"></div>
             <div class="speakerRib"></div>
         </div>
-        <div id="cassetteComp" class="">
-            <div id="cassetteCompWindow" class=""></div>
+        <div id="cassetteReader">
+            <!-- Cassette is referenced from: https://codepen.io/abehjat/pen/gnyEk -->
+            <div class="cassette">
+                <div class="inner_1">
+                    <div class="inner_2">
+                        <i class="fa fa-cog left_w" id="leftCog"></i>
+                        <i class="fa fa-cog right_w" id="rightCog"></i>
+                    </div>
+                </div>
+                <div id="trapezoid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="cassetteComp" class="">
+                <div id="cassetteCompWindow" class="">
+                </div>
+            </div>
         </div>
-        <div id="screenSection"></div>
+        <div id="screenSection">
+            <div id="runningJoke">"Let the Bodies Hit the Floor" was originally written as Chuck Norris' theme song.</div>
+        </div>
         <div id="buttonSection">
             <div class="button" id="back">
-                <img src="resources/step-backward.svg">
+                <img src="icons/step-backward.svg" onclick="stepBackward()">
             </div>
             <div class="button" id="pause" onclick="pause()">
-                <img src="resources/pause-symbol.svg">
+                <img src="icons/pause-symbol.svg">
             </div>
             <div class="button" id="play" onclick="speak()">
-                <img src="resources/play-button.svg">
+                <img src="icons/play-button.svg">
             </div>
             <div class="button" id="forward">
-                <img src="resources/step-forward.svg">
-            </div>
-            <div class="button" id="mute">
-                <img src="resources/volume-off.svg">
+                <img src="icons/step-forward.svg" onclick="stepForward()">
             </div>
         </div>
+    </div>
+
+
+
     </div>
 </div>
 </body>

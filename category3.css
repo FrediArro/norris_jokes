@@ -1,10 +1,11 @@
-@font-face { font-family: ChuckNorris; src: url("fonts/Chuck_Norris.otf"); }
+@font-face { font-family: Anonymous; src: url("fonts/Anonymous.ttf"); }
 
 body {
     position: absolute;
     margin: 0;
     height: 100%;
     width: 100%;
+    z-index: -3;
 }
 
 .titlescreen {
@@ -27,7 +28,7 @@ body {
 }
 
 #title {
-    font-family: ChuckNorris;
-    font-size: 7vmin;
+    font-family: Anonymous;
+    font-size: 5vmin;
     color: #FF3819;
 }
