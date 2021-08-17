@@ -1,4 +1,4 @@
-@font-face { font-family: ChuckNorris; src: url("fonts/Chuck_Norris.otf"); }
+@font-face { font-family: ChuckNorris; src: url("../fonts/Chuck_Norris.otf"); }
 
 body {
     position: absolute;
